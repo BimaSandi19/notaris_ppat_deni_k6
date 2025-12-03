@@ -1,0 +1,171 @@
+════════════════════════════════════════════════════════════════
+  🚀 PENGUJIAN AVAILABILITY k6 - START HERE
+════════════════════════════════════════════════════════════════
+
+👋 SELAMAT DATANG!
+
+Jika ini pertama kali Anda membaca dokumentasi ini, ikuti langkah-langkah
+berikut dengan urutan yang benar:
+
+════════════════════════════════════════════════════════════════
+1️⃣  PAHAMI STATUS SAAT INI (2 MENIT)
+════════════════════════════════════════════════════════════════
+
+✅ K6 sudah terinstall: v1.4.2
+✅ Script sudah disiapkan: availability-test.js
+✅ Dry run sudah OK: 100% checks passed
+✅ Test utama: SEDANG BERJALAN (9 jam)
+
+Start Time: 28 Nov 2025, 03:20:11
+Expected End: 28 Nov 2025, 12:20:11
+Status: ✅ Running smoothly (safe to close terminal)
+
+════════════════════════════════════════════════════════════════
+2️⃣  BACA DOKUMENTASI DALAM URUTAN INI
+════════════════════════════════════════════════════════════════
+
+A. EXECUTIVE_SUMMARY.md (2 minutes)
+   → Ringkasan eksekutif apa yang sudah dilakukan
+
+B. README.md (5 minutes)
+   → Panduan lengkap & overview
+
+C. QUICK_REFERENCE.md (3 minutes)
+   → Cheat sheet praktis & tips
+
+TOTAL READING TIME: ±10 menit untuk memahami segalanya
+
+════════════════════════════════════════════════════════════════
+3️⃣  TUNGGU TEST SELESAI
+════════════════════════════════════════════════════════════════
+
+⏱️  Durasi: 9 jam (dari 03:20 sampai 12:20)
+📊 Hasil otomatis tersimpan di: results/ folder
+✅ Aman untuk menutup terminal (test tetap berjalan)
+💾 Tidak perlu monitor real-time
+
+════════════════════════════════════════════════════════════════
+4️⃣  SETELAH TEST SELESAI (Est. 28 Nov, 12:20)
+════════════════════════════════════════════════════════════════
+
+1. Cek file .log di folder: d:\Applications\websitedn-k6\results\
+   
+2. Buka file: TEMPLATE_ANALISIS.md
+   
+3. Copy hasil test ke template:
+   - Copy metrik dari .log file
+   - Isi tabel performa
+   - Tulis analisis
+   
+4. Baca PENJELASAN_PERBAIKAN.md untuk konteks perbaikan script
+   
+5. Tulis kesimpulan & rekomendasi
+
+════════════════════════════════════════════════════════════════
+5️⃣  UNTUK LAPORAN TUGAS AKHIR
+════════════════════════════════════════════════════════════════
+
+Tambahkan ke bab Testing Results:
+
+A. Penjelasan Rancangan (dari DOKUMENTASI.md)
+B. Tabel Hasil Performa (dari TEMPLATE_ANALISIS.md)
+C. Screenshot Output (dari .log file)
+D. Analisis & Interpretasi (dari TEMPLATE_ANALISIS.md)
+E. Perbaikan Script (dari PENJELASAN_PERBAIKAN.md)
+F. Kesimpulan & Rekomendasi (dari TEMPLATE_ANALISIS.md)
+G. Lampiran: Full Test Output (dari .log file)
+
+════════════════════════════════════════════════════════════════
+❓ PERTANYAAN UMUM
+════════════════════════════════════════════════════════════════
+
+Q: Apa itu pengujian Availability?
+A: Test untuk memastikan sistem tersedia & responsif 24/7
+
+Q: Kenapa durasi 9 jam?
+A: Sesuai rancangan Bab 3: jam kerja (08:00-17:00)
+
+Q: Apakah perlu monitor test real-time?
+A: Tidak, hasil otomatis tersimpan. Aman tutup terminal.
+
+Q: Bagaimana kalau ada error?
+A: Baca file QUICK_REFERENCE.md → Troubleshooting section
+
+Q: Output test artinya apa?
+A: Baca file QUICK_REFERENCE.md → Output & Report section
+
+Q: File mana yang penting?
+A: EXECUTIVE_SUMMARY.md, README.md, QUICK_REFERENCE.md
+
+════════════════════════════════════════════════════════════════
+📁 FILE PENTING
+════════════════════════════════════════════════════════════════
+
+Mulai dari sini:
+  ▪ EXECUTIVE_SUMMARY.md ← Ringkasan 2 menit
+  ▪ README.md ← Panduan utama
+  ▪ QUICK_REFERENCE.md ← Cheat sheet
+
+Untuk detail:
+  ▪ DOKUMENTASI.md ← Teknis lengkap
+  ▪ PENJELASAN_PERBAIKAN.md ← Apa yang diubah
+  ▪ INDEX.md ← Navigasi lengkap
+
+Setelah test selesai:
+  ▪ TEMPLATE_ANALISIS.md ← Template analisis
+  ▪ results/*.log ← Output test
+
+════════════════════════════════════════════════════════════════
+⚡ QUICK COMMANDS
+════════════════════════════════════════════════════════════════
+
+Lihat test masih berjalan?
+  Get-Process | Where-Object {$_.ProcessName -like "*k6*"}
+
+Stop test (jika perlu)?
+  Tekan Ctrl + C di terminal
+
+Run test lagi (di masa depan)?
+  cd d:\Applications\websitedn-k6
+  k6 run scripts/availability-test.js
+
+════════════════════════════════════════════════════════════════
+✅ CHECKLIST
+════════════════════════════════════════════════════════════════
+
+Before test ends:
+  ☐ Sudah baca EXECUTIVE_SUMMARY.md
+  ☐ Sudah baca README.md
+  ☐ Sudah baca QUICK_REFERENCE.md
+
+After test ends (Est. 28 Nov, 12:20):
+  ☐ Cek file .log di folder results/
+  ☐ Buka TEMPLATE_ANALISIS.md
+  ☐ Isi tabel hasil performa
+  ☐ Baca PENJELASAN_PERBAIKAN.md
+  ☐ Tulis analisis & kesimpulan
+  ☐ Masukkan ke laporan tugas akhir
+
+════════════════════════════════════════════════════════════════
+🎯 NEXT STEP SEKARANG
+════════════════════════════════════════════════════════════════
+
+👉 Buka file: EXECUTIVE_SUMMARY.md
+   (Baca untuk 2 menit, akan paham semuanya)
+
+Kemudian: README.md (5 menit)
+
+Kemudian: Tunggu test selesai & ikuti step 4-5 di atas.
+
+════════════════════════════════════════════════════════════════
+
+📞 Need help?
+  → INDEX.md untuk navigasi file
+  → QUICK_REFERENCE.md untuk FAQ
+  → DOKUMENTASI.md untuk detail teknis
+
+🎓 Good luck dengan tugas akhir Anda! 🚀
+
+════════════════════════════════════════════════════════════════
+Created: 28 November 2025
+Status: ✅ Test in Progress, Documentation Complete

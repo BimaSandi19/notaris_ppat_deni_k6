@@ -1,0 +1,203 @@
+# 📊 Ringkasan Setup Pengujian Availability k6
+
+## ✅ Status: TESTING IN PROGRESS
+- **Start Time**: 28 November 2025, 03:20:11 (WIB)
+- **Expected End Time**: 28 November 2025, 12:20:11 (WIB)
+- **Duration**: 9 jam (jam kerja 08:00-17:00)
+- **Status**: Background process berjalan, silakan tutup terminal dengan aman
+
+---
+
+## 📁 File Structure yang Sudah Dibuat
+
+```
+d:\Applications\websitedn-k6\
+├── scripts/
+│   └── availability-test.js          ← Script utama pengujian
+├── results/                          ← Folder untuk menyimpan hasil test
+├── .env                              ← Environment variables
+├── DOKUMENTASI.md                    ← Penjelasan lengkap
+└── RINGKASAN_SETUP.txt              ← File ini
+```
+
+---
+
+## 🔧 Perubahan & Perbaikan dari Script Awal
+
+### ❌ **Masalah di Script Original dari GPT:**
+1. Tidak ada custom metrics tracking
+2. Error handling kurang baik
+3. Checks hanya untuk status code, tidak untuk response time
+4. Tidak ada setup/teardown function
+5. Timing tidak presisi (hanya 1 menit sleep global)
+6. Tidak ada logging yang jelas
+
+### ✅ **Solusi yang Diterapkan:**
+
+#### 1. **Custom Metrics Tracking**
+```javascript
+import { Counter, Trend, Gauge } from 'k6/metrics';
+const errorCounter = new Counter('errors_total');
+const successCounter = new Counter('success_total');
+const responseTimeByPage = new Trend('response_time_by_page');
+const pageAvailability = new Gauge('page_availability');
+```
+- Melacak error dan success per halaman
+- Tracking trend response time yang lebih detail
+- Availability score per page
+
+#### 2. **Helper Function dengan Error Handling**
+```javascript
+function makeRequest(method, url, name) {
+  // Automatic error catching
+  // Response time tracking
+  // Timeout handling (30s)
+}
+```
+
+#### 3. **Group Organization**
+```javascript
+group('1️⃣ Login Page Testing', function () { ... })
+group('2️⃣ Dashboard Admin Testing', function () { ... })
+group('3️⃣ Reminder Tagihan Testing', function () { ... })
+group('4️⃣ Riwayat Tagihan Testing', function () { ... })
+```
+- Better report structure
+- Easier to analyze per page
+
+#### 4. **Enhanced Checks**
+```javascript
+check(res, {
+  '✓ Status 200 atau 302': (r) => r.status === 200 || r.status === 302,
+  '✓ Response time < 1s': (r) => r.timings.duration < 1000,
+  '✓ No server errors': (r) => r.status < 500,
+});
+```
+- Not just status, but also response time
+- Server error detection
+
+#### 5. **Setup & Teardown Functions**
+```javascript
+export function setup() { 
+  // Tampilkan konfigurasi test
+}
+export function teardown(data) { 
+  // Tampilkan ringkasan
+}
+```
+
+#### 6. **Better Thresholds**
+```javascript
+thresholds: {
+  'http_req_failed': ['rate<=0.05'],           // Max 5% error
+  'http_req_duration': ['p(95)<1000'],         // P95 < 1000ms
+  'http_req_duration{url:login}': ['p(99)<2000'],  // P99 < 2000ms
+  'checks': ['rate>0.95'],                     // 95% checks pass
+  'http_req_duration': ['avg<500'],            // Avg < 500ms
+}
+```
+
+#### 7. **Precise Timing Control**
+```javascript
+sleep(5);   // Per group request
+sleep(30);  // Untuk total 1 menit interval
+```
+- Total cycle ≈ 45 detik (4 halaman × 5s + 25s request time)
+- Sleep 30s lagi → Total 1 menit per cycle
+
+---
+
+## 🧪 Dry Run Results (2 Menit Test)
+
+Test 2 menit sudah dilakukan sebelumnya dengan hasil **EXCELLENT**:
+
+| Metrik | Hasil | Status |
+|--------|-------|--------|
+| Checks Passed | 100% (36/36) | ✅ PASS |
+| Error Rate | 0% | ✅ PASS |
+| P95 Response Time | 100.84ms | ✅ PASS (< 1000ms) |
+| Avg Response Time | 70.43ms | ✅ PASS (< 500ms) |
+| Iterations | 3 complete | ✅ OK |
+| Total Requests | 12 successful | ✅ PASS |
+
+---
+
+## 📈 Hasil Test 9 Jam akan Menunjukkan:
+
+Setelah 9 jam selesai, Anda akan mendapat output dengan metrik:
+
+```
+THRESHOLDS:
+  ✓ http_req_failed: rate<=0.05  (Error rate ≤ 5%)
+  ✓ http_req_duration: p(95)<1000  (P95 < 1000ms)
+  ✓ checks: rate>0.95  (95% checks passed)
+  ...
+
+TOTAL RESULTS:
+  checks_total: Total jumlah checks
+  checks_succeeded: Jumlah yang berhasil
+  http_req_duration: Statistik response time
+  http_req_failed: Persentase request yang failed
+  iterations: Total cycle yang selesai
+  http_reqs: Total HTTP requests
+  ...
+```
+
+---
+
+## 📝 Cara Menggunakan Hasil Test
+
+### 1. **Setelah Test Selesai**
+Hasil akan disimpan di:
+```
+d:\Applications\websitedn-k6\results\availability-test-YYYYMMDD-HHMMSS.log
+```
+
+### 2. **Copy Hasil ke Laporan**
+Salin output test ke dokumen Word/PDF untuk lampiran.
+
+### 3. **Analisis Hasil**
+```
+✓ = PASS (memenuhi threshold)
+✗ = FAIL (tidak memenuhi threshold)
+```
+
+Jika ada ✗, berarti perlu investigasi lebih lanjut.
+
+### 4. **Screenshots untuk Laporan**
+- Copy hasil output dari terminal
+- Screenshot summary report
+- Paste ke dokumen tugas akhir di bagian Testing Results
+
+---
+
+## 🛑 Jika Ingin Menghentikan Test
+
+Tekan `Ctrl + C` di terminal. Test akan gracefully stop dan menampilkan ringkasan hasil.
+
+---
+
+## 💡 Next Steps
+
+1. **Tunggu test selesai** (9 jam)
+2. **Copy hasil** ke folder `results`
+3. **Analisis metrics** dan buat tabel di laporan
+4. **Screenshot output** untuk dokumentasi
+5. **Tuliskan kesimpulan** berdasarkan hasil test
+
+---
+
+## 📚 File yang Bisa Anda Refer
+
+- `scripts/availability-test.js` - Script lengkap dengan semua fitur
+- `DOKUMENTASI.md` - Penjelasan detail setiap bagian
+- `.env` - Konfigurasi environment variables
+- `results/` - Folder hasil test
+
+---
+
+**Test dimulai**: 28 Nov 2025 03:20:11  
+**Status**: ✅ Running di background  
+**Jangan khawatir kalau menutup terminal - test akan tetap berjalan**
+
+Good luck dengan tugas akhir Anda! 🚀

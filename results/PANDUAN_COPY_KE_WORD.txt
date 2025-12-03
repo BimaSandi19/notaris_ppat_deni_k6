@@ -1,0 +1,369 @@
+================================================================================
+  PANDUAN LANGKAH DEMI LANGKAH: MEMASUKKAN HASIL TESTING KE WORD DOCUMENT
+================================================================================
+
+TAHAP 1: PERSIAPAN
+================================================================================
+
+1. Buka Microsoft Word atau Google Docs
+2. Buka dokumen laporan tugas akhir Anda
+3. Posisikan kursor di mana Anda ingin memasukkan Bab 4 (Hasil Pengujian)
+
+
+TAHAP 2: COPY ISI TEMPLATE
+================================================================================
+
+File yang perlu dibuka:
+├─ TEMPLATE_BAB_4_HASIL_PENGUJIAN.md (untuk content utama)
+├─ QUICK_REFERENCE_UNTUK_WORD.md (untuk numbers/facts)
+└─ RINGKASAN_HASIL_PENGUJIAN.md (untuk backup/reference)
+
+Lokasi folder: d:\Applications\websitedn-k6\results\
+
+
+TAHAP 3: STRUKTUR YANG HARUS ANDA COPY
+================================================================================
+
+PART 1: OPENING (Salinan dari TEMPLATE_BAB_4)
+-----------
+→ Buka TEMPLATE_BAB_4_HASIL_PENGUJIAN.md
+→ Copy dari "### 4.1 Pelaksanaan Pengujian" hingga "#### 4.1.3 Metrik Kinerja..."
+→ Paste ke dalam Word document Anda
+→ Sesuaikan format heading dengan style guide institusi
+
+PART 2: MAIN RESULTS (Salinan dari TEMPLATE_BAB_4)
+-----------
+→ Copy bagian "### 4.2 Hasil Pengujian" (entire section)
+→ Ini adalah core findings dari testing
+→ Format tabel sudah siap pakai
+
+PART 3: ANALYSIS (Salinan dari TEMPLATE_BAB_4)
+-----------
+→ Copy "### 4.3 Analisis Kegagalan" hingga "### 4.7"
+→ Ini memberikan deeper analysis
+→ Include interpretations untuk thesis
+
+PART 4: CONCLUSION (Salinan dari TEMPLATE_BAB_4)
+-----------
+→ Copy "### 4.8 Findings Summary" hingga "### 4.10 Kesimpulan Bab"
+→ Ini menutup Bab 4 dengan ringkasan
+
+PART 5: CHAPTER 5 EXCERPT (Salinan dari TEMPLATE_BAB_4)
+-----------
+→ Copy "## BAB 5. KESIMPULAN & SARAN (Excerpt)"
+→ Ini untuk awal Bab 5 tentang conclusions
+
+
+TAHAP 4: MENYESUAIKAN DENGAN INSTITUSI ANDA
+================================================================================
+
+STEP 4.1: Format Heading
+---------
+Jika institusi memiliki style guide:
+- Pastikan Bab 4, Bab 5 title mengikuti template institusi
+- Heading 2 untuk "4.1 Pelaksanaan", "4.2 Hasil" dst
+- Heading 3 untuk sub-sections
+
+STEP 4.2: Format Tabel
+---------
+- Mari ke Insert > Table
+- Copy-paste tabel dari TEMPLATE_BAB_4
+- Ubah background warna sesuai preferensi institusi
+- Standard: Light blue (#D9E9F7) untuk header
+
+STEP 4.3: Font dan Ukuran
+---------
+- Body text: 12pt Calibri atau Times New Roman (sesuaikan institusi)
+- Table text: 11pt
+- Heading: Bold
+- Check spacing (1.5 atau 2.0 line spacing untuk tugas akhir)
+
+STEP 4.4: Nomor Halaman dan Referensi
+---------
+- Bab 4 dimulai di halaman baru
+- Insert page break sebelum "BAB 4"
+- Gunakan heading style untuk table of contents auto-generation
+
+
+TAHAP 5: MENAMBAHKAN GRAFIK/VISUAL
+================================================================================
+
+OPSYON 1: Text-based descriptions (Mudah, tanpa tools khusus)
+-----------
+Dari QUICK_REFERENCE_UNTUK_WORD.md section "G. VISUAL DESCRIPTIONS":
+→ Copy deskripsi visual
+→ Gunakan sebagai captions di bawah placeholder atau actual graphs
+→ Contoh:
+   "Gambar 4.1: Timeline Ketersediaan Sistem
+    Garis timeline menunjukkan 9 jam testing dengan availability rate 
+    99.93%, dengan hanya 6 spike failure di antara 715 iterasi yang smooth."
+
+OPSYON 2: Membuat grafik simple di Excel/Sheets (Recommended)
+-----------
+a) Buat file Excel baru
+b) Input data dari QUICK_REFERENCE atau log file
+c) Buat 4 charts:
+   - Chart 1: Availability Rate (pie chart)
+   - Chart 2: Response Time Distribution (line chart)
+   - Chart 3: Iteration Duration (line chart)
+   - Chart 4: Target vs Actual (bar chart)
+d) Copy-paste charts ke Word
+
+OPSYON 3: Tools online gratis
+-----------
+- chartbuilder.org (simple bar/line charts)
+- infogr.am (infographic style)
+- canva.com (professional looking)
+
+
+TAHAP 6: MEMASUKKAN TABEL-TABEL UTAMA
+================================================================================
+
+Tabel WAJIB ada di Word:
+
+□ Tabel 4.1: Ringkasan Hasil (dari QUICK_REFERENCE section B)
+  Copy dari "Tabel 1: Ringkasan Hasil"
+  
+□ Tabel 4.2: Response Time Statistics (dari QUICK_REFERENCE section B)
+  Copy dari "Tabel 4: Response Time Statistics"
+  
+□ Tabel 4.3: Target vs Hasil (dari QUICK_REFERENCE section B)
+  Copy dari "Tabel 2: Target vs Hasil"
+  
+□ Tabel 4.4: Endpoint Results (dari QUICK_REFERENCE section B)
+  Copy dari "Tabel 3: Per Endpoint Results"
+
+Cara copy tabel ke Word:
+1. Pilih tabel di markdown file
+2. Copy text tabel
+3. Di Word: Insert > Table > Create Table
+4. Input dimensions (baris x kolom) dari tabel
+5. Fill in data
+6. Format dengan borders dan warna
+
+
+TAHAP 7: EDITING & LOCALIZATION
+================================================================================
+
+STEP 7.1: Review Content
+---------
+- Baca semua text yang di-copy
+- Pastikan no "placeholder" atau "[ANDA ISI]" text
+- Pastikan nomor figure/table sesuai dengan document Anda
+- Update cross-references jika ada
+
+STEP 7.2: Translate ke Bahasa Indonesia (jika template English)
+---------
+Sudah dalam Bahasa Indonesia, tapi check:
+- "Virtual Users" → "Pengguna Virtual"
+- "Request" → "Permintaan" atau tetap "Request"
+- "Response Time" → "Waktu Respons" atau tetap "Response Time"
+- Follow terminology di institusi Anda
+
+STEP 7.3: Add Proper References
+---------
+Contoh:
+"Dari hasil testing (lihat Tabel 4.2), response time rata-rata..."
+"Seperti ditampilkan dalam Gambar 4.1, sistem menunjukkan..."
+"Sebagaimana dijelaskan dalam sub-bab 4.2.1..."
+
+STEP 7.4: Add Page Numbers & Formatting
+---------
+- Insert header/footer dengan nomor halaman
+- Bold Bab headings
+- Ensure consistent formatting throughout
+
+
+TAHAP 8: CONTENT QUALITY CHECK CHECKLIST
+================================================================================
+
+MANDATORY SECTIONS (Pastikan Ada):
+✓ 4.1 Pelaksanaan Pengujian (Test setup explanation)
+✓ 4.2 Hasil Pengujian (Main results)
+✓ 4.3 Analisis Kegagalan (Failure analysis)
+✓ 4.4 Data Transfer & Network (Network stats)
+✓ 4.5 Consistency & Stability (Stability analysis)
+✓ 4.6 Interpretasi Hasil (Interpretation)
+✓ 4.7 Perbandingan dengan Target (Comparison)
+✓ 4.8 Findings Summary (Summary)
+✓ 4.9 Rekomendasi (Recommendations)
+✓ 4.10 Kesimpulan Bab (Chapter conclusion)
+
+RECOMMENDED ADDITIONS:
+✓ At least 3 tables
+✓ At least 1-2 figures/graphs
+✓ Cross-references to methodology chapter
+✓ Proper citations if using references
+
+QUALITY METRICS:
+✓ No spelling/grammar errors
+✓ Consistent terminology
+✓ All numbers from source data (log file)
+✓ Proper formatting and alignment
+✓ Clear and professional appearance
+
+
+TAHAP 9: SPECIAL NUMBERS TO HIGHLIGHT
+================================================================================
+
+Core Numbers (MUST INCLUDE):
+- 99.93% → Availability rate (main finding)
+- 71.47 ms → Average response time (performa metric)
+- 0.00% → Error rate (reliability metric)
+- 9 jam → Testing duration
+- 2.864 → Total requests
+- 715 → Total iterations
+- 6 → Failed checks (0.06%)
+
+Secondary Numbers (SHOULD INCLUDE):
+- 131.27 ms → P95 response time
+- 53.14 ms → Median response time
+- 4.89 s → Max response time
+- 10 MB → Data received
+- 1.9 MB → Data sent
+
+
+TAHAP 10: PROOF-READING & FINAL CHECKS
+================================================================================
+
+BEFORE SUBMISSION:
+□ Baca seluruh Bab 4 dari awal sampai akhir
+□ Pastikan logical flow (setup → results → analysis → conclusion)
+□ Check semua tabel nomor (Tabel 4.1, 4.2, dst)
+□ Check semua figure nomor (Gambar 4.1, 4.2, dst)
+□ Verify all numbers dari source (log file verification)
+□ Grammar check (use Word's spell checker)
+□ Format consistency check
+□ Page break positioning check
+□ Font consistency check (no mixed fonts)
+
+RED FLAGS TO AVOID:
+✗ Missing key metrics/numbers
+✗ Inconsistent terminology
+✗ Poor table formatting
+✗ Typos in technical terms
+✗ Broken references
+✗ Inconsistent numbering (Tabel 4.2 sebelum 4.1)
+✗ Grammar errors
+✗ Poor page layout
+
+
+TAHAP 11: INTEGRATION DENGAN BAB LAIN
+================================================================================
+
+Connection ke Bab 3 (Metodologi):
+- Reference test configuration dari Bab 3
+- Contoh: "Seperti dijelaskan pada sub-bab 3.4.1, testing dilakukan dengan..."
+
+Connection ke Bab 5 (Kesimpulan):
+- Ringkas main findings dari Bab 4
+- Link recommendations dari Bab 4 ke Bab 5
+- Provide insights untuk future work
+
+Internal References:
+- Link Bab 4.1 ke Bab 4.2 ("Konfigurasi di atas menghasilkan hasil sebagai berikut...")
+- Link Bab 4.6 ke Bab 4.8 ("Berdasarkan interpretasi ini...")
+
+
+TAHAP 12: FINAL SUBMISSION PREP
+================================================================================
+
+Checklist Final:
+☐ All sections complete and proofread
+☐ All tables and figures in place
+☐ All references working (cross-references, citations)
+☐ Formatting consistent throughout
+☐ Page breaks in correct locations
+☐ Header/footer consistent
+☐ TOC (Table of Contents) updated
+☐ All links working (if PDF)
+☐ Saved with correct filename
+☐ Backup copy created
+
+Recommended Backup:
+- Save original Word file (.docx)
+- Export as PDF for submission
+- Keep Markdown source files
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: Tabel tidak format dengan baik
+SOLUSI: 
+- Delete tabel, re-insert menggunakan Insert > Table
+- Atau copy dari Excel (lebih reliable)
+
+PROBLEM: Numbers tidak cocok dengan log file
+SOLUSI:
+- Re-verify dari file log: d:\Applications\websitedn-k6\results\...
+- Check last 100 lines untuk summary statistics
+
+PROBLEM: Grammar/Spelling errors
+SOLUSI:
+- Use Word's spell checker (Review > Spell Check)
+- Gunakan Grammarly online checker (free version)
+
+PROBLEM: Formatting messed up setelah copy-paste
+SOLUSI:
+- Use Paste Special (Ctrl+Shift+V)
+- Choose "Unformatted Text"
+- Re-apply formatting manually
+
+PROBLEM: Can't find summary statistics
+SOLUSI:
+- Buka log file di text editor
+- Search untuk "THRESHOLDS" dan "TOTAL RESULTS"
+- Copy dari section itu
+
+
+================================================================================
+ESTIMATED TIME NEEDED
+================================================================================
+
+⏱️  Reading & Understanding Results: 15 menit
+⏱️  Copying Template Content: 20 menit
+⏱️  Adjusting Format & Style: 30 menit
+⏱️  Adding Tables: 20 menit
+⏱️  Creating Graphics: 30 menit (optional, dapat skip)
+⏱️  Proofreading & Final Edits: 20 menit
+
+TOTAL: ~2.5 jam untuk integration lengkap
+
+Atau cepat (tanpa graphics): ~90 menit
+
+
+================================================================================
+CONTOH FINAL PARAGRAPH
+================================================================================
+
+Berikut contoh paragraf final yang bisa Anda gunakan untuk closing Bab 4:
+
+"Pengujian ketersediaan sistem selama 9 jam berkelanjutan telah menghasilkan 
+data komprehensif mengenai performa dan reliabilitas aplikasi web Notaris 
+Deni. Dengan availability rate sebesar 99.93%, response time rata-rata 71.47ms, 
+dan error rate 0.00%, sistem telah menunjukkan kesiapannya untuk deployment 
+production. Semua threshold kinerja telah tercapai dan melampaui target, 
+mengindikasikan bahwa sistem dapat diandalkan untuk mendukung operasional 
+bisnis notaris dengan SLA 99.9%. Hasil testing ini akan menjadi baseline untuk 
+future monitoring dan performance evaluation."
+
+Sesuaikan dengan style penulisan institusi Anda.
+
+
+================================================================================
+READY? START HERE:
+================================================================================
+
+1. ✅ Buka file TEMPLATE_BAB_4_HASIL_PENGUJIAN.md
+2. ✅ Buka Microsoft Word document Anda
+3. ✅ Copy content section by section (ikuti TAHAP 3)
+4. ✅ Paste dan format di Word
+5. ✅ Follow quality checklist (TAHAP 8)
+6. ✅ Proofread final (TAHAP 10)
+7. ✅ Submit!
+
+Semoga sukses dengan tugas akhir Anda! 🎓
+
+================================================================================
