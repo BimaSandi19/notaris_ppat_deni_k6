@@ -14,7 +14,6 @@ import { check, sleep, group } from "k6";
  */
 
 export const options = {
-
   // 1. LOAD CONFIGURATION - Jumlah Virtual Users
   vus: 1, // 1 admin keuangan (single user)
 

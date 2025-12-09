@@ -4,11 +4,11 @@ Proyek load testing untuk mengukur ketersediaan (availability) sistem Notaris PP
 
 ## 📌 Status Pengujian
 
-| Item | Status |
-|------|--------|
-| **K6 Version** | ✅ v1.4.2 |
-| **Script Setup** | ✅ Ready |
-| **Dry Run Test** | ✅ PASSED |
+| Item                    | Status       |
+| ----------------------- | ------------ |
+| **K6 Version**          | ✅ v1.4.2    |
+| **Script Setup**        | ✅ Ready     |
+| **Dry Run Test**        | ✅ PASSED    |
 | **Main Test (9 hours)** | ✅ COMPLETED |
 
 ---
@@ -16,17 +16,20 @@ Proyek load testing untuk mengukur ketersediaan (availability) sistem Notaris PP
 ## ⚡ Quick Start
 
 ### Untuk Pemula
+
 1. Baca dokumentasi di folder `results/`
 2. Lihat `QUICK_REFERENCE_UNTUK_WORD.md` untuk ringkasan singkat
 3. Lihat `TEMPLATE_BAB_4_HASIL_PENGUJIAN.md` untuk template thesis
 
 ### Untuk Menjalankan Test
+
 ```powershell
 cd d:\Applications\websitedn-k6
 k6 run scripts/availability-test.js
 ```
 
 ### Untuk Test Durasi Lain
+
 ```powershell
 k6 run --duration 1h --vus 1 scripts/availability-test.js
 ```
@@ -36,19 +39,21 @@ k6 run --duration 1h --vus 1 scripts/availability-test.js
 ## 📊 Test Configuration
 
 ### Konfigurasi Beban
+
 - **Virtual Users (VUs)**: 1 user (Admin Keuangan)
 - **Duration**: 9 jam (working hours)
 - **Request Interval**: 1 menit per cycle
 - **Endpoints**: 4 halaman (login, dashboard, reminder, history)
 
 ### Performance Targets
-| Metrik | Target | Hasil |
-|--------|--------|-------|
-| Error Rate | ≤ 5% | ✅ 0.00% |
-| Success Rate | ≥ 95% | ✅ 99.93% |
+
+| Metrik            | Target   | Hasil       |
+| ----------------- | -------- | ----------- |
+| Error Rate        | ≤ 5%     | ✅ 0.00%    |
+| Success Rate      | ≥ 95%    | ✅ 99.93%   |
 | P95 Response Time | < 1000ms | ✅ 131.27ms |
-| Avg Response Time | < 500ms | ✅ 71.47ms |
-| Checks Passed | > 95% | ✅ 99.94% |
+| Avg Response Time | < 500ms  | ✅ 71.47ms  |
+| Checks Passed     | > 95%    | ✅ 99.94%   |
 
 ---
 
@@ -76,6 +81,7 @@ websitedn-k6/
 ## 📈 Hasil Testing (9 Jam)
 
 ### Metrik Utama
+
 ```
 Availability Rate:        99.93%
 HTTP Error Rate:          0.00% (0 dari 2.864 requests)
@@ -88,24 +94,27 @@ Total Iterations:         715
 ```
 
 ### Perincian Response Time
+
 - **Minimum**: 10.96ms
 - **Maksimum**: 4.89s (1 outlier, 0.03% dari total)
 - **Median**: 53.14ms
 - **P90**: 95.31ms
 
 ### Endpoints Tested
-| Endpoint | Status |
-|----------|--------|
-| Login | ✅ Stable |
+
+| Endpoint  | Status    |
+| --------- | --------- |
+| Login     | ✅ Stable |
 | Dashboard | ✅ Stable |
-| Reminder | ✅ Stable |
-| History | ✅ Stable |
+| Reminder  | ✅ Stable |
+| History   | ✅ Stable |
 
 ---
 
 ## ✨ Script Features
 
 ### Fitur Utama
+
 - ✅ **Custom Metrics**: Counter, Trend, Gauge untuk tracking detail
 - ✅ **Error Handling**: Comprehensive error handling & recovery
 - ✅ **Enhanced Checks**: Validasi status code, response time, server errors
@@ -115,6 +124,7 @@ Total Iterations:         715
 - ✅ **Environment Variables**: Flexible BASE_URL configuration
 
 ### Perbaikan dari Original Script
+
 1. Menambahkan custom metrics tracking
 2. Meningkatkan error handling
 3. Menambahkan enhanced checks
@@ -128,21 +138,22 @@ Total Iterations:         715
 
 ### File di Folder `results/`
 
-| File | Deskripsi |
-|------|-----------|
-| **QUICK_REFERENCE_UNTUK_WORD.md** | Ringkasan singkat + tabel siap copy ke Word |
-| **TEMPLATE_BAB_4_HASIL_PENGUJIAN.md** | Template lengkap BAB 4 untuk thesis |
-| **START_HERE.txt** | Panduan cepat 2 menit |
-| **INDEX_DAN_PANDUAN.txt** | Index lengkap & guidance |
-| **PANDUAN_COPY_KE_WORD.txt** | Step-by-step copy ke Word |
-| **RINGKASAN_HASIL_PENGUJIAN.md** | Executive summary hasil testing |
-| **SUMMARY_LENGKAP.txt** | Complete project summary |
+| File                                  | Deskripsi                                   |
+| ------------------------------------- | ------------------------------------------- |
+| **QUICK_REFERENCE_UNTUK_WORD.md**     | Ringkasan singkat + tabel siap copy ke Word |
+| **TEMPLATE_BAB_4_HASIL_PENGUJIAN.md** | Template lengkap BAB 4 untuk thesis         |
+| **START_HERE.txt**                    | Panduan cepat 2 menit                       |
+| **INDEX_DAN_PANDUAN.txt**             | Index lengkap & guidance                    |
+| **PANDUAN_COPY_KE_WORD.txt**          | Step-by-step copy ke Word                   |
+| **RINGKASAN_HASIL_PENGUJIAN.md**      | Executive summary hasil testing             |
+| **SUMMARY_LENGKAP.txt**               | Complete project summary                    |
 
 ---
 
 ## 📝 Penggunaan untuk Thesis
 
 ### Bab 4: Hasil Pengujian
+
 Gunakan file `TEMPLATE_BAB_4_HASIL_PENGUJIAN.md` yang sudah tersedia di folder `results/`. Template ini mencakup:
 
 - **4.1 Pelaksanaan Pengujian**: Deskripsi setup & konfigurasi
@@ -151,6 +162,7 @@ Gunakan file `TEMPLATE_BAB_4_HASIL_PENGUJIAN.md` yang sudah tersedia di folder `
 - **4.4 Analisis Hasil**: Penjelasan detail & interpretasi
 
 ### Format Copy ke Word
+
 1. Buka file `QUICK_REFERENCE_UNTUK_WORD.md`
 2. Copy tabel & data sesuai kebutuhan
 3. Paste ke Word document
@@ -161,11 +173,13 @@ Gunakan file `TEMPLATE_BAB_4_HASIL_PENGUJIAN.md` yang sudah tersedia di folder `
 ## 🔧 Konfigurasi Environment
 
 File `.env` untuk custom BASE_URL:
+
 ```
 BASE_URL=https://yourdomain.com
 ```
 
 Atau set di terminal:
+
 ```powershell
 $env:BASE_URL="https://yourdomain.com"
 k6 run scripts/availability-test.js
