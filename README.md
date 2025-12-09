@@ -15,12 +15,6 @@ Proyek load testing untuk mengukur ketersediaan (availability) sistem Notaris PP
 
 ## ⚡ Quick Start
 
-### Untuk Pemula
-
-1. Baca dokumentasi di folder `results/`
-2. Lihat `QUICK_REFERENCE_UNTUK_WORD.md` untuk ringkasan singkat
-3. Lihat `TEMPLATE_BAB_4_HASIL_PENGUJIAN.md` untuk template thesis
-
 ### Untuk Menjalankan Test
 
 ```powershell
@@ -66,13 +60,7 @@ websitedn-k6/
 │   └── availability-test.js     ← Script k6 utama
 ├── results/
 │   ├── availability-test-20251128-032010.log
-│   ├── QUICK_REFERENCE_UNTUK_WORD.md
-│   ├── TEMPLATE_BAB_4_HASIL_PENGUJIAN.md
-│   ├── START_HERE.txt
-│   ├── INDEX_DAN_PANDUAN.txt
-│   ├── PANDUAN_COPY_KE_WORD.txt
 │   ├── RINGKASAN_HASIL_PENGUJIAN.md
-│   └── SUMMARY_LENGKAP.txt
 └── .env                        ← Environment variables
 ```
 
@@ -140,33 +128,7 @@ Total Iterations:         715
 
 | File                                  | Deskripsi                                   |
 | ------------------------------------- | ------------------------------------------- |
-| **QUICK_REFERENCE_UNTUK_WORD.md**     | Ringkasan singkat + tabel siap copy ke Word |
-| **TEMPLATE_BAB_4_HASIL_PENGUJIAN.md** | Template lengkap BAB 4 untuk thesis         |
-| **START_HERE.txt**                    | Panduan cepat 2 menit                       |
-| **INDEX_DAN_PANDUAN.txt**             | Index lengkap & guidance                    |
-| **PANDUAN_COPY_KE_WORD.txt**          | Step-by-step copy ke Word                   |
 | **RINGKASAN_HASIL_PENGUJIAN.md**      | Executive summary hasil testing             |
-| **SUMMARY_LENGKAP.txt**               | Complete project summary                    |
-
----
-
-## 📝 Penggunaan untuk Thesis
-
-### Bab 4: Hasil Pengujian
-
-Gunakan file `TEMPLATE_BAB_4_HASIL_PENGUJIAN.md` yang sudah tersedia di folder `results/`. Template ini mencakup:
-
-- **4.1 Pelaksanaan Pengujian**: Deskripsi setup & konfigurasi
-- **4.2 Hasil Pengujian**: Tabel & metrik lengkap
-- **4.2.4 Status Thresholds**: Perbandingan target vs hasil
-- **4.4 Analisis Hasil**: Penjelasan detail & interpretasi
-
-### Format Copy ke Word
-
-1. Buka file `QUICK_REFERENCE_UNTUK_WORD.md`
-2. Copy tabel & data sesuai kebutuhan
-3. Paste ke Word document
-4. Format sesuai template thesis
 
 ---
 
@@ -214,8 +176,7 @@ A: Edit `scripts/availability-test.js` & tambahkan group baru, ikuti format exis
 ## 📌 Important Notes
 
 1. **Hasil Test**: Sudah selesai, cek `results/availability-test-*.log`
-2. **Dokumentasi Thesis**: Semua file siap di `results/` folder
-3. **GitHub Repository**: https://github.com/BimaSandi19/notaris_ppat_deni_k6
+2. **GitHub Repository**: https://github.com/BimaSandi19/notaris_ppat_deni_k6
 
 ---
 

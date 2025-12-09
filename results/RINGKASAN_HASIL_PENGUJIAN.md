@@ -193,28 +193,6 @@ https://notarisdeni.web.id
    - Tidak ada degradasi performa
    - Cycling pattern sempurna
 
-### 📊 Interpretasi untuk Thesis
-
-**Bab 3 (Metodologi):**
-
-- Metodologi testing: Load testing continuous 9 jam
-- Tool: k6 v1.4.2
-- Metrik: Availability, Response Time, Error Rate, Throughput
-
-**Bab 4 (Hasil Pengujian):**
-
-- Hasil: Sistem tersedia 99.93% selama 9 jam
-- Performa: Response time rata-rata 71ms (excellent)
-- Reliabilitas: 0% error rate (sempurna)
-- Throughput: ~0.088 request/s sustainable
-
-**Bab 5 (Kesimpulan):**
-
-- Sistem web notarisdeni.web.id memiliki **ketersediaan tinggi** (99.93%)
-- Sistem mampu menangani beban testing berkelanjutan selama 9 jam tanpa degradasi
-- Performa responsif dengan latency rendah
-- **Rekomendasi**: Sistem siap untuk production dengan SLA 99.9%
-
 ---
 
 ## 📁 File Output
@@ -289,8 +267,6 @@ Data Rate (KB/s):   0.316
 ```
 
 ---
-
-**Dokumen ini siap diintegrasikan ke dalam laporan tugas akhir (Skripsi/TA) Anda.**
 
 _Generated: 28 November 2024_  
 _Test Framework: K6 Load Testing Tool_  
